@@ -1,14 +1,14 @@
-import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.SearchContext;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import pages.BasePage;
 
-public class AddPatients {
-        WebDriver driver;
+public class AddPatientsPage extends BasePage {
 
 
-    public AddPatients(WebDriver driver) {
-        this.driver = driver;
+
+    public AddPatientsPage() {
         PageFactory.initElements(driver, this);
     }
 
@@ -22,11 +22,10 @@ public class AddPatients {
         AddPatient.click();
     }
 
-    public static class PatientSearchPage {
-        WebDriver driver;
+    public  class PatientSearchPage {
 
-        public PatientSearchPage(WebDriver driver) {
-            this.driver = driver;
+        public PatientSearchPage() {
+
             PageFactory.initElements(driver, this);
         }
         //Page factory

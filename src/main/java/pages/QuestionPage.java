@@ -8,11 +8,9 @@ import org.openqa.selenium.support.PageFactory;
 
 import java.util.List;
 
-public class QuestionPage {
-    WebDriver driver;
+public class QuestionPage extends BasePage{
 
-    public QuestionPage(WebDriver driver) {
-        this.driver = driver;
+    public QuestionPage() {
         PageFactory.initElements(driver, this);
     }
 

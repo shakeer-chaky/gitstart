@@ -8,11 +8,9 @@ import org.openqa.selenium.support.PageFactory;
 import java.util.List;
 
 
-public class PatientsPage {
-    WebDriver driver;
+public class PatientsPage extends BasePage{
 
-    public PatientsPage(WebDriver driver) {
-        this.driver = driver;
+    public PatientsPage() {
         PageFactory.initElements(driver, this);
 
     }
@@ -57,15 +55,15 @@ public class PatientsPage {
         selectSalutation.click();
     }
 
-    public void enterFirstName(String txtFirstname) {
+    public void setFirstName(String txtFirstname) {
         firstName.sendKeys(txtFirstname);
     }
 
-    public void enterMiddleName(String txtMiddleName) {
+    public void setMiddleName(String txtMiddleName) {
         middleName.sendKeys(txtMiddleName);
     }
 
-    public void enterLastName(String txtLastName) {
+    public void setLastName(String txtLastName) {
         lastName.sendKeys(txtLastName);
     }
 
@@ -73,15 +71,15 @@ public class PatientsPage {
       genderChoose.get(0).click();
     }
 
-    public void enterDob(String txtdob) {
+    public void setDOB(String txtdob) {
         dateOfBirth.sendKeys(txtdob);
     }
 
-    public void enterTelephone(String txtNumber) {
+    public void setPhoneNumber(String txtNumber) {
         phNumber.sendKeys(txtNumber);
     }
 
-    public void enterMail(String txtEmail) {
+    public void setEmailId(String txtEmail) {
         mailID.sendKeys(txtEmail);
     }
 

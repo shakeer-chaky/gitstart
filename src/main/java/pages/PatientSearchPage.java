@@ -3,13 +3,11 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-git
 
-public class PatientSearchPage {
-    WebDriver driver;
+public class PatientSearchPage extends BasePage{
 
-    public PatientSearchPage(WebDriver driver) {
-        this.driver = driver;
+
+    public PatientSearchPage() {
         PageFactory.initElements(driver, this);
 
     }
@@ -19,7 +17,7 @@ public class PatientSearchPage {
     WebElement patientName;
 
 
-    public void  typePatientName(String txtPatientName){
+    public void setPatientName(String txtPatientName){
         patientName.sendKeys(txtPatientName);
     }
 

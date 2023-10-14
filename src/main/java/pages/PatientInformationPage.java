@@ -1,6 +1,5 @@
 package pages;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
+
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -8,11 +7,11 @@ import org.openqa.selenium.support.PageFactory;
 import java.util.List;
 
 
-public class PatientInformationPage {
-        WebDriver driver;
+public class PatientInformationPage extends BasePage{
 
-        public PatientInformationPage(WebDriver driver) {
-                this.driver = driver;
+
+        public PatientInformationPage() {
+
                 PageFactory.initElements(driver, this);
 
         }
@@ -36,27 +35,27 @@ public class PatientInformationPage {
         @FindBy(css = "input[role='searchbox']")
         WebElement countries;
 
-        // @FindBy(xpath = "//li[contains(@id,'select2-nationality')]")
-        //       List<WebElement> chooseCountry;
+         @FindBy(xpath = "//li[contains(@id,'select2-nationality')]")
+               List<WebElement> countryList;
 
         @FindBy(name = "photo_id")
         WebElement photo;
 
 
 
-        public void enterIdNumber(String txtIdNumber) {
+        public void setIdNumber(String txtIdNumber) {
                 id_Number.sendKeys(txtIdNumber);
         }
 
-        public void selectFont() {
+        public void clickFont() {
                 bold_font.click();
         }
 
-        public void selectHeading() {
+        public void clickHeading() {
                 heading.click();
         }
 
-        public void enterAddress(String txtAddress) {
+        public void setAddress(String txtAddress) {
                 address.sendKeys(txtAddress);
         }
 
@@ -64,16 +63,19 @@ public class PatientInformationPage {
                 country_list.click();
         }
 
-        public void selectCountry() {
-                countries.click();
-        }
 
-        //doubts
-        // public void selectYourCountry() {
-        //       chooseCountry.equals("india");
+        public void selectYourCountry(String countryToChoose) {
+                 countries.click();
+                 for (WebElement country : countryList) {
+                         if (country.getText().equalsIgnoreCase(countryToChoose)) {
+                                 country.click();
+                                 break;
+                         }
+                 }
+         }
 
 
-        public void addPhoto(String photoPath) {
+        public void setPhotosPath(String photoPath) {
                 photo.sendKeys(photoPath);
         }
 
