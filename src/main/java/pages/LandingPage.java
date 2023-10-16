@@ -8,7 +8,7 @@ import org.openqa.selenium.support.PageFactory;
 public class LandingPage extends BasePage{
 
 
-    public LandingPage() {
+    public LandingPage () {
         PageFactory.initElements(driver , this);
     }
 

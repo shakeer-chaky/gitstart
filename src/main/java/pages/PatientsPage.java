@@ -84,7 +84,4 @@ public class PatientsPage extends BasePage{
     }
 
 
-
-
-
 }

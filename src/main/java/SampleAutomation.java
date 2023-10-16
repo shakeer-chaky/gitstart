@@ -3,11 +3,9 @@ import pages.*;
 import java.io.IOException;
 
 public class SampleAutomation {
-
     public static void main(String[] args) throws InterruptedException, IOException {
 
         try {
-
             BasePage basePage = new BasePage();
             basePage.launchApplication();
 
@@ -17,17 +15,16 @@ public class SampleAutomation {
             loginPage.loginApplication("rasheed@riamsdental.com", "Riams@1988");
 
 
+
+
             LandingPage landingPage = new LandingPage();
             landingPage.clickHome();
 
 
             DashboardPage dashboardPage = new DashboardPage();
-
-            loginPage.capturePageScreenshot("DashboardPage");
             dashboardPage.clickToPatient();
             dashboardPage.clickToPatients();
             dashboardPage.clickToDetails();
-
 
             PatientsPage patientsPage = new PatientsPage();
             patientsPage.clickToSalutation();
@@ -48,8 +45,6 @@ public class SampleAutomation {
             patientInformationPage.setAddress("savanoor,puttur,india.");
             patientInformationPage.clickForCountry();
             patientInformationPage.selectYourCountry("India");
-
-            // patientInformationPage.selectYourCountry();
             patientInformationPage.setPhotosPath("C:\\Rasheed\\autofile\\Home.jpg");
 
 
@@ -72,28 +67,26 @@ public class SampleAutomation {
             PatientSearchPage patientSearchPage = new PatientSearchPage();
             patientSearchPage.setPatientName("mahammad shakeer k");
 
-            patientSearchPage.capturePageScreenshot("PatientInformationPage");
-            patientSearchPage.sleep(3);
+            //patientSearchPage.capturePageScreenshot("PatientInformationPage");
+            // patientSearchPage.capturePageScreenshot("LoginPage");
+            // patientSearchPage.capturePageScreenshot("QuestionPage");
+               patientSearchPage.capturePageScreenshot("PatientSearchPage");
+
+               patientSearchPage.sleep(10);
 
             //  Runtime.getRuntime().exec("C:\\Rasheed\\autofile\\newfile.exe");
 
+        } catch (Exception exception) {
+
+            System.out.println("Inside Exception block\n " + exception.getStackTrace());
+        } finally {
+            PatientSearchPage patientSearchPage = new PatientSearchPage();
+                    System.out.println("finally block is always executed");
+
+
         }
-        catch (Exception exception){
-
-            System.out.println("Inside Exception block\n "+exception.getStackTrace());
-        }
-
-        finally {
-            PatientSearchPage patientSearchPage=new PatientSearchPage();
-            patientSearchPage.quitApplication();
-        }
 
 
 
 
-    }
-
-}
-
-
-
+    }}
