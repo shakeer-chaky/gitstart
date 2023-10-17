@@ -1,15 +1,8 @@
 package pages;
 
-import org.apache.commons.io.FileUtils;
-import org.openqa.selenium.By;
-import org.openqa.selenium.OutputType;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-
-import java.io.File;
-import java.io.IOException;
-import java.util.logging.FileHandler;
 
 
 public class DashboardPage extends BasePage{

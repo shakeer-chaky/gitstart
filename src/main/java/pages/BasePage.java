@@ -1,6 +1,6 @@
 package pages;
 
-import com.sun.deploy.cache.Cache;
+
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -11,12 +11,11 @@ import org.openqa.selenium.ie.InternetExplorerDriver;
 import java.io.File;
 import java.io.IOException;
 import java.time.Duration;
-import java.util.logging.FileHandler;
+
 
 public class BasePage
 {
     protected static WebDriver driver;
-    private static Cache FileUtils;
 
   public void sleep(int timeOutInSeconds){
      try{

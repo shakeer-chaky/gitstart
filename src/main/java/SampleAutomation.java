@@ -4,17 +4,15 @@ import java.io.IOException;
 
 public class SampleAutomation {
     public static void main(String[] args) throws InterruptedException, IOException {
-
-        try {
             BasePage basePage = new BasePage();
             basePage.launchApplication();
+
+
 
 
             LoginPage loginPage = new LoginPage();
             loginPage.capturePageScreenshot("LoginPage");
             loginPage.loginApplication("rasheed@riamsdental.com", "Riams@1988");
-
-
 
 
             LandingPage landingPage = new LandingPage();
@@ -76,15 +74,6 @@ public class SampleAutomation {
 
             //  Runtime.getRuntime().exec("C:\\Rasheed\\autofile\\newfile.exe");
 
-        } catch (Exception exception) {
-
-            System.out.println("Inside Exception block\n " + exception.getStackTrace());
-        } finally {
-            PatientSearchPage patientSearchPage = new PatientSearchPage();
-                    System.out.println("finally block is always executed");
-
-
-        }
 
 
 
