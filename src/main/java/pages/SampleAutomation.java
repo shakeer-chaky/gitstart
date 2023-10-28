@@ -1,3 +1,5 @@
+package pages;
+
 import pages.*;
 
 import java.io.IOException;

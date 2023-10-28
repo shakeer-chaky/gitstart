@@ -1,14 +1,13 @@
-package Cucumber.Stepdefination;
-
+package stepdefination;
 import io.cucumber.java.en.Then;
 import pages.LandingPage;
 
-public class MyStepdefs {
+public class landingPageSteps {
+    LandingPage landingPage;
     @Then("the user click on home button on the landing screen")
     public void theUserClickOnHomeButtonOnTheLandingScreen()
     {
-
-        LandingPage landingPage=new LandingPage();
+        landingPage=new LandingPage();
         landingPage.clickHome();
     }
 }
