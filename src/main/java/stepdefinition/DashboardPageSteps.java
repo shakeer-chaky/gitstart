@@ -19,7 +19,7 @@ public class DashboardPageSteps {
         dashboardPage.clickToPatients();
     }
 
-    @Then("^ the use click to plus button for add the details of patient$")
+    @Then("^the use click to plus button for add the details of patient$")
             public void user_click_plus_button(){
         dashboardPage.clickToDetails();
 
