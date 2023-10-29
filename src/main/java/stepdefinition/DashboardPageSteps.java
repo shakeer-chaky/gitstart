@@ -1,4 +1,4 @@
-package stepdefination;
+package stepdefinition;
 
 import io.cucumber.java.en.Then;
 import pages.DashboardPage;

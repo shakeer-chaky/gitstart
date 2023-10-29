@@ -5,6 +5,7 @@
     Background:
       Given the user landed on login page
 
+
     @tag2
     Scenario Outline: Verify the user able to create a patient
       Given Logged in  with username <email> and password <password>

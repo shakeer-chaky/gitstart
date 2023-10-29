@@ -25,6 +25,7 @@ public class AddPatientsPage extends BasePage {
 
     public  class PatientSearchPage {
 
+
         public PatientSearchPage() {
 
             PageFactory.initElements(driver, this);
