@@ -43,7 +43,6 @@
 
 
 
-
       Examples:
         | email                  | password  |name   |
         | rasheed@riamsdental.com| Riams@1988|shakeer|
