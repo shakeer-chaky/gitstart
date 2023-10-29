@@ -13,6 +13,7 @@
       Then the user fill in patient information in patient details page and click submit
 
 
+
       Examples:
         | email                  | password  |
         | rasheed@riamsdental.com| Riams@1988|
