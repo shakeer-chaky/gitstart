@@ -1,9 +1,10 @@
 package stepdefinition;
 
 import io.cucumber.java.en.Then;
+import pages.BasePage;
 import pages.DashboardPage;
 
-public class DashboardPageSteps {
+public class DashboardPageSteps extends BasePage {
 
     DashboardPage dashboardPage;
 

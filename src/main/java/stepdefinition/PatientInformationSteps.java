@@ -1,9 +1,10 @@
 package stepdefinition;
 
 import io.cucumber.java.en.Then;
+import pages.BasePage;
 import pages.PatientInformationPage;
 
-public class PatientInformationSteps {
+public class PatientInformationSteps extends BasePage {
     PatientInformationPage patientInformationPage;
 
     @Then("^the user set ID Number of patient$")

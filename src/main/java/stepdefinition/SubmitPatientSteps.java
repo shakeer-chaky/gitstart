@@ -2,9 +2,10 @@ package stepdefinition;
 
 import io.cucumber.java.en.Then;
 import pages.AddPatientsPage;
+import pages.BasePage;
 import pages.PatientSearchPage;
 
-public class SubmitPatientSteps {
+public class SubmitPatientSteps extends BasePage {
     public PatientSearchPage patientSearchPage;
     AddPatientsPage addPatientsPage;
     @Then("^the user click to submit button$")

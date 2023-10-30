@@ -3,7 +3,7 @@ import io.cucumber.java.en.Then;
 import pages.BasePage;
 import pages.LandingPage;
 
-public class landingPageSteps {
+public class landingPageSteps extends BasePage {
     LandingPage landingPage;
     BasePage basePage;
 

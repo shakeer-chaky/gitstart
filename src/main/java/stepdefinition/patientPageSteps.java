@@ -1,8 +1,9 @@
 package stepdefinition;
 import io.cucumber.java.en.Then;
+import pages.BasePage;
 import pages.PatientsPage;
 
-public class patientPageSteps {
+public class patientPageSteps extends BasePage {
     PatientsPage patientsPage;
     @Then("^the user fill patient salutation$")
     public void user_fill_patient_salutation(){

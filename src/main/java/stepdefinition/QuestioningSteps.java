@@ -1,9 +1,10 @@
 package stepdefinition;
 
 import io.cucumber.java.en.Then;
+import pages.BasePage;
 import pages.QuestionPage;
 
-public class QuestioningSteps {
+public class QuestioningSteps extends BasePage {
     QuestionPage questionPage;
     @Then("^the user click for hospitalisedQuery$")
     public void user_click_hospitalised(){

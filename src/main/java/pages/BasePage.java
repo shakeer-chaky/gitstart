@@ -34,7 +34,10 @@ public class BasePage
 
 
     public void launchApplication(){
+
         String browserName = "chrome";
+
+        //String browserName = System.getenv("browser");
 
 
         if (browserName.equalsIgnoreCase("chrome")) {
