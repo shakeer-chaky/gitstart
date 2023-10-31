@@ -8,6 +8,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="riams_dcms_automation" />
+        <module name="riams_dcms_automation - backup" />
       </profile>
     </annotationProcessing>
   </component>
